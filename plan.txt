@@ -1,0 +1,17 @@
+Meeting
+- location FK
+- join_info FK
+- time FK
+- type (Online, In Person, Hybrid) -> Enum
+- community (ex AA or Recovery Dharma) FK
+
+RecoveryCommunity
+- name
+- description
+- short_name
+
+Location
+- street_address
+- province/state
+- country
+- lat and long? Probably won't need
