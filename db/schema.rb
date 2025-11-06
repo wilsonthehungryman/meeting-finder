@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_06_185249) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_06_190436) do
+  create_table "locations", force: :cascade do |t|
+    t.string "street_address"
+    t.string "province"
+    t.string "country"
+    t.decimal "lat"
+    t.decimal "long"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "recovery_communities", force: :cascade do |t|
     t.string "name"
     t.string "description"
