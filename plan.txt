@@ -1,17 +1,39 @@
 Meeting
+- source 
 - location FK
 - join_info FK
 - time FK
 - type (Online, In Person, Hybrid) -> Enum
 - community (ex AA or Recovery Dharma) FK
+- unique source and location and time and type and community
 
 RecoveryCommunity
 - name
 - description
-- short_name
+- acronym
 
 Location
 - street_address
 - province/state
 - country
+- post/zip code
 - lat and long? Probably won't need
+
+Features
+
+Seed meetings
+ - Find some sources
+ - Parse the sources
+ - Implement in a way that we don't delete everything every time
+
+List meetings
+ - Use a card style
+ - Order by time?
+ - Show on a map
+
+Search/Filter Meetings
+  - By location
+  - By type
+  - By community
+  - By time
+

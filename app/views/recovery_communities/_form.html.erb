@@ -1,0 +1,32 @@
+<%= form_with(model: recovery_community) do |form| %>
+  <% if recovery_community.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(recovery_community.errors.count, "error") %> prohibited this recovery_community from being saved:</h2>
+
+      <ul>
+        <% recovery_community.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :acronym, style: "display: block" %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

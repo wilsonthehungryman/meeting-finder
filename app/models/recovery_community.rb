@@ -1,0 +1,2 @@
+class RecoveryCommunity < ApplicationRecord
+end

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Recovery communities" %>
+
+<h1>Recovery communities</h1>
+
+<div id="recovery_communities">
+  <% @recovery_communities.each do |recovery_community| %>
+    <%= render recovery_community %>
+    <p>
+      <%= link_to "Show this recovery community", recovery_community %>
+    </p>
+  <% end %>
+</div>
