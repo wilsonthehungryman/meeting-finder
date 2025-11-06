@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  source: MyString
+  time: 2025-11-06 13:19:47
+  type: 
+  recovery_community: one
+  location: one
+  join_info: one
+
+two:
+  source: MyString
+  time: 2025-11-06 13:19:47
+  type: 
+  recovery_community: two
+  location: two
+  join_info: two

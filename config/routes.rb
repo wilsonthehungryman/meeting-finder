@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :meetings, only: [ :index, :show ]
   resources :join_infos, only: [ :index, :show ]
   resources :locations, only: [ :index, :show ]
   resources :recovery_communities, only: [ :index, :show ]
