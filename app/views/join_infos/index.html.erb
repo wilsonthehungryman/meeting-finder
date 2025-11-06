@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Join infos" %>
+
+<h1>Join infos</h1>
+
+<div id="join_infos">
+  <% @join_infos.each do |join_info| %>
+    <%= render join_info %>
+    <p>
+      <%= link_to "Show this join info", join_info %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New join info", new_join_info_path %>

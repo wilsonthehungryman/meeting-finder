@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_06_190436) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_06_191124) do
+  create_table "join_infos", force: :cascade do |t|
+    t.string "link"
+    t.string "meeting_id"
+    t.string "meeting_provider"
+    t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "locations", force: :cascade do |t|
     t.string "street_address"
     t.string "province"

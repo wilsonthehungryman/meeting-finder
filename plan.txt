@@ -2,7 +2,7 @@ Meeting
 - source 
 - location FK
 - join_info FK
-- time FK
+- time
 - type (Online, In Person, Hybrid) -> Enum
 - community (ex AA or Recovery Dharma) FK
 - unique source and location and time and type and community
@@ -18,6 +18,12 @@ Location
 - country
 - post/zip code
 - lat and long? Probably won't need
+
+Join Info
+  - link
+  - meeting_id
+  - meeting_provider
+  - password
 
 Features
 
