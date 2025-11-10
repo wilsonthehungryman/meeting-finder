@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_10_153001) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_10_160728) do
   create_table "join_infos", force: :cascade do |t|
     t.string "link"
     t.string "meeting_id"
@@ -31,6 +31,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_10_153001) do
     t.string "name"
     t.boolean "wheelchair_accessible"
     t.string "city"
+    t.string "postal_code"
   end
 
   create_table "meetings", force: :cascade do |t|
