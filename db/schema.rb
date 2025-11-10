@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_06_191947) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_10_153001) do
   create_table "join_infos", force: :cascade do |t|
     t.string "link"
     t.string "meeting_id"
@@ -28,6 +28,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_06_191947) do
     t.decimal "long"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.boolean "wheelchair_accessible"
+    t.string "city"
   end
 
   create_table "meetings", force: :cascade do |t|
@@ -35,10 +38,13 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_06_191947) do
     t.datetime "time"
     t.string "type"
     t.integer "recovery_community_id", null: false
-    t.integer "location_id", null: false
-    t.integer "join_info_id", null: false
+    t.integer "location_id"
+    t.integer "join_info_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.boolean "recurring"
+    t.string "meeting_type"
     t.index ["join_info_id"], name: "index_meetings_on_join_info_id"
     t.index ["location_id"], name: "index_meetings_on_location_id"
     t.index ["recovery_community_id"], name: "index_meetings_on_recovery_community_id"
